@@ -37,7 +37,7 @@ kbd {
   white-space: nowrap;
 }
 
-/* Wurst News */
+/* Wurst News & Wiki */
 .post-content {
   font-size: 18px;
 }
@@ -80,6 +80,11 @@ kbd {
 .header-row {
   margin-left: 0;
   margin-right: 0;
+}
+
+/* light gray background */
+.lightgray {
+  background-color: #f5f5f5;
 }
 
 /* Wurst Sliders */

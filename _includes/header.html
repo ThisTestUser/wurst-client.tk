@@ -9,13 +9,9 @@
 			<a class="navbar-brand" href="/" style="padding: 9px;">
 				<img src="https://cloud.githubusercontent.com/assets/10100202/8148736/a02a0596-12aa-11e5-927d-3adf3ff4753e.png" alt="Wurst Client">
 			</a>
-			<a class="navbar-brand" href="/news/2016-01-17-Finally-Number-1/" title="Now it's Official: Wurst is the #1 Hacked Client" style="padding: 9px;">
-				<img src="https://cloud.githubusercontent.com/assets/10100202/12377784/c7a118ec-bd29-11e5-9f64-57f8904c3a9d.png" alt="#1">
-			</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbar-collapse">
 			<div class="row header-row">
-				{% unless include.no_search %}
 					<ul class="nav navbar-nav navbar-right">
 						<li>
 							<a href="#" data-toggle="modal" data-target="#search">
@@ -24,36 +20,35 @@
 							</a>
 						</li>
 					</ul>
-				{% endunless %}
 			</div>
 			<div class="row header-row">
 				<ul class="nav navbar-nav navbar-right">
 					<li>
-						<a href="/downloads">
+						<a href="/download/">
 							<span class="octicon octicon-cloud-download"></span>
-							Downloads
+							Download Wurst
 						</a>
 					</li>
 					<li>
-						<a href="/github">
+						<a href="/github/">
 							<span class="octicon octicon-repo"></span>
 							Source Code
 						</a>
 					</li>
 					<li>
-						<a href="/wiki">
+						<a href="/wiki/Main_Page/">
 							<span class="octicon octicon-book"></span>
 							Wiki
 						</a>
 					</li>
 					<li>
-						<a href="/feedback">
+						<a href="/feedback/">
 							<span class="octicon octicon-comment"></span>
 							Feedback
 						</a>
 					</li>
 					<li>
-						<a href="/merch">
+						<a href="/merch/">
 							<span class="octicon octicon-gift"></span>
 							Merchandise
 						</a>
@@ -63,7 +58,6 @@
 		</div>
 	</div>
 </nav>
-{% unless include.no_search %}
 <div class="modal fade" id="search">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -75,13 +69,23 @@
 					<span class="octicon octicon-search"></span>
 					Search
 				</p>
+
       </div>
       <div class="modal-body">
-				<input id="search-input" type="text" class="form-control" autofocus>
-				<br>
-				<ul id="search-results" class="list-group"></ul>
+				<div class="cse-branding-bottom" style="background-color:#FFFFFF;color:#000000">
+				  <div class="cse-branding-form">
+				    <form action="http://www.google.com" id="cse-search-box">
+				      <div>
+				        <input type="hidden" name="cx" value="partner-pub-5218363098774955:3739724421" />
+				        <input type="hidden" name="ie" value="UTF-8" />
+				        <input type="text" name="q" size="55" />
+				        <input type="submit" name="sa" value="Search" />
+				      </div>
+				    </form>
+				  </div>
+				</div>
+
       </div>
     </div>
   </div>
 </div>
-{% endunless %}
